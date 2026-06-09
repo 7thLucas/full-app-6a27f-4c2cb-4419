@@ -1,40 +1,81 @@
 <style>
-  .mode-landscape .sl-foundation-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-visual-panel { width: 45%; min-height: 0; }
-  .mode-portrait .sl-foundation-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { padding: 2rem 1.5rem; }
-  .mode-portrait .sl-visual-panel { min-height: 280px; }
+  .mode-landscape .sl-split { flex-direction: row; }
+  .mode-portrait  .sl-split { flex-direction: column; }
+  .mode-landscape .sl-problem  { width: 50%; padding: 3rem; }
+  .mode-portrait  .sl-problem  { padding: 2rem 2rem 1.5rem; }
+  .mode-landscape .sl-solution { width: 50%; padding: 3rem; }
+  .mode-portrait  .sl-solution { padding: 1.5rem 2rem 2rem; }
 </style>
 <section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-foundation-layout">
-    <div class="sl-content-panel">
-      <div class="flex items-center justify-between mb-4">
-        <span class="inline-block text-xs font-semibold tracking-widest uppercase" style="color:#3b82f6;">Foundation</span>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 border rounded-full" style="background-color:#3b82f6; border-color:#3b82f630;">
-          <span class="text-xs font-semibold" style="color:#ffffff;">Validated</span>
+  <div class="sl-split flex h-full">
 
-        </span>
-      </div>
-      <h1 class="text-3xl font-bold text-slate-900 leading-tight mb-8">New visitors need a confident first impression of a production-ready SaaS admin dashboard platform, without overwhelming complexity or premature feature claims.</h1>
-      <div class="space-y-5">
-        <div class="border-l-4 pl-4 relative" style="border-color:#F43F5E;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#E11D48;">The Problem</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Existing SaaS landing pages are cluttered with feature lists before trust is established. Developers and makers need a confident, honest entry point that communicates quality upfront — then builds deeper value as they explore.</p>
-        </div>
-        <div class="border-l-4 pl-4 relative" style="border-color:#3b82f6;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#3b82f6;">The Solution</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Teams and developers evaluating full-stack SaaS templates face cluttered, feature-heavy landing pages that obscure the core value proposition. A minimal, honest entry point builds trust and sets expectations for a well-crafted, developer-friendly platform.</p>
-        </div>
-        <div class="border-l-4 border-sky-500 pl-4 relative"><h2 class="text-sm font-semibold text-sky-600 uppercase tracking-wide mb-1">Target Audience</h2><p class="text-slate-700 leading-relaxed text-sm">Developers, indie makers, and early-stage teams evaluating full-stack SaaS base templates and production-ready admin dashboard starting points.</p></div>
-        <div class="border-l-4 border-amber-500 pl-4 relative"><h2 class="text-sm font-semibold text-amber-600 uppercase tracking-wide mb-1">Personal Motivation</h2><p class="text-slate-700 leading-relaxed text-sm">Create a landing page that mirrors the product&#x27;s philosophy: intentional, well-crafted, and honest. No buzzwords. Just a solid foundation ready to scale.</p></div>
-      </div>
-      <div class="mt-6 flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">SaaS</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Admin Dashboard</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Developer-Friendly</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Minimal Design</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Production-Ready</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Remix</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">TypeScript</span></div>
-      <div class="mt-8"><data-attribution /></div>
+    <!-- Problem panel -->
+    <div class="sl-problem flex flex-col justify-center bg-white border-r border-slate-100">
+      <span class="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-3">The Problem</span>
+      <h2 class="text-2xl font-bold text-slate-900 leading-snug mb-6">
+        Every project starts<br>with the same expensive detour.
+      </h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+            <svg class="w-2.5 h-2.5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <p class="text-sm text-slate-600 leading-relaxed">Weeks rebuilding auth, routing, and RBAC before a single line of real product logic is written</p>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+            <svg class="w-2.5 h-2.5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <p class="text-sm text-slate-600 leading-relaxed">Inconsistent UI across pages — no shared design language from landing page to dashboard</p>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+            <svg class="w-2.5 h-2.5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <p class="text-sm text-slate-600 leading-relaxed">A landing page shouldn't block product momentum — but starting from zero always does</p>
+        </li>
+      </ul>
     </div>
-    <div class="sl-visual-panel relative">
-      <img src="http://localhost:8001/common/image-generation?prompt=overwhelmed+developer+at+desk+surrounded+by+cluttered+landing+page+designs+confusion&amp;keyspace=g0fpf2x9&amp;user_id=4419" alt="visual" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-40"></div>
+
+    <!-- Solution panel -->
+    <div class="sl-solution flex flex-col justify-center bg-violet-600">
+      <span class="text-xs font-semibold tracking-widest uppercase text-violet-200 mb-3">The Solution</span>
+      <h2 class="text-2xl font-bold text-white leading-snug mb-6">
+        Ship in minutes,<br>not weeks.
+      </h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <p class="text-sm text-violet-100 leading-relaxed">A fully wired Remix + Express base — auth, RBAC, and admin dashboard ready before you write feature one</p>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <p class="text-sm text-violet-100 leading-relaxed">shadcn/ui component system — the same design language from the "Hello World" hero to the deepest dashboard screen</p>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <p class="text-sm text-violet-100 leading-relaxed">Deploy the landing page today — add sections as features solidify. The foundation is already there</p>
+        </li>
+      </ul>
     </div>
+
   </div>
 </section>
