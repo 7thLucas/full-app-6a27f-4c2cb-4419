@@ -71,5 +71,32 @@ export const configurableSchemas: ConfigurableSchemas = {
         },
       ],
     },
+    {
+      fieldName: "heroHeading",
+      type: "string",
+      required: true,
+      label: "Hero Heading",
+      minLength: 1,
+      maxLength: 120,
+    },
+    {
+      fieldName: "heroSubheading",
+      type: "string",
+      required: false,
+      label: "Hero Subheading",
+      maxLength: 240,
+    },
+    {
+      fieldName: "heroBackgroundColor",
+      type: "color",
+      required: false,
+      label: "Hero Background Color",
+    },
+    {
+      fieldName: "heroTextColor",
+      type: "color",
+      required: false,
+      label: "Hero Text Color",
+    },
   ],
 };
