@@ -1,0 +1,87 @@
+<style>
+  .mode-landscape .sl-grid { grid-template-columns: repeat(3, 1fr); }
+  .mode-portrait  .sl-grid { grid-template-columns: repeat(2, 1fr); }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-10">
+
+    <!-- Header row -->
+    <div class="flex items-start justify-between mb-6 flex-shrink-0">
+      <div>
+        <span class="text-xs font-semibold tracking-widest uppercase text-slate-400">What's Included</span>
+        <h2 class="mt-1 text-3xl font-bold text-slate-900 tracking-tight">Core Features</h2>
+      </div>
+      <!-- Persona chips -->
+      <div class="flex gap-2 mt-1">
+        <span class="px-3 py-1 bg-violet-600 text-white text-xs font-semibold rounded-full">Developer</span>
+        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded-full">Team Lead</span>
+        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded-full">Founder</span>
+      </div>
+    </div>
+
+    <!-- Feature cards grid -->
+    <div class="sl-grid grid gap-4 flex-1 min-h-0">
+
+      <div class="flex flex-col p-5 rounded-xl border border-slate-200 bg-white">
+        <div class="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center mb-3 flex-shrink-0">
+          <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="text-sm font-bold text-slate-900">Remix Flat Routes</h3>
+        <p class="mt-1 text-xs text-slate-500 leading-relaxed">File-based routing with colocated loaders and actions — zero config, instant pages.</p>
+      </div>
+
+      <div class="flex flex-col p-5 rounded-xl border border-slate-200 bg-white">
+        <div class="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center mb-3 flex-shrink-0">
+          <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="text-sm font-bold text-slate-900">Auth &amp; RBAC</h3>
+        <p class="mt-1 text-xs text-slate-500 leading-relaxed">Role-based guards and permission middleware wired before you touch a single route.</p>
+      </div>
+
+      <div class="flex flex-col p-5 rounded-xl border border-slate-200 bg-white">
+        <div class="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center mb-3 flex-shrink-0">
+          <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+          </svg>
+        </div>
+        <h3 class="text-sm font-bold text-slate-900">shadcn/ui Components</h3>
+        <p class="mt-1 text-xs text-slate-500 leading-relaxed">50+ accessible, composable primitives — same design language from landing to dashboard.</p>
+      </div>
+
+      <div class="flex flex-col p-5 rounded-xl border border-slate-200 bg-white">
+        <div class="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center mb-3 flex-shrink-0">
+          <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+          </svg>
+        </div>
+        <h3 class="text-sm font-bold text-slate-900">MongoDB + Mongoose</h3>
+        <p class="mt-1 text-xs text-slate-500 leading-relaxed">Typegoose models and typed services — schema-first data layer out of the box.</p>
+      </div>
+
+      <div class="flex flex-col p-5 rounded-xl border border-slate-200 bg-white">
+        <div class="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center mb-3 flex-shrink-0">
+          <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+          </svg>
+        </div>
+        <h3 class="text-sm font-bold text-slate-900">Admin Dashboard</h3>
+        <p class="mt-1 text-xs text-slate-500 leading-relaxed">Sidebar layout, data tables, and modular feature scaffolding — ready for real content.</p>
+      </div>
+
+      <div class="flex flex-col p-5 rounded-xl border border-slate-200 bg-white">
+        <div class="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center mb-3 flex-shrink-0">
+          <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+          </svg>
+        </div>
+        <h3 class="text-sm font-bold text-slate-900">TypeScript End-to-End</h3>
+        <p class="mt-1 text-xs text-slate-500 leading-relaxed">Typed from DB model to UI prop — no runtime surprises, cleaner refactors throughout.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
