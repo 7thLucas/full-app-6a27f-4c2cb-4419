@@ -20,11 +20,8 @@ build:
         - 'src/**/*'
         - 'public/**/*'
         - 'components/**/*'
-        - '*.ts'
-        - '*.js'
         - 'tsconfig.json'
         - '*.css'
-        - '*.json'
         - '*.html'
 manifests:
   rawYaml:

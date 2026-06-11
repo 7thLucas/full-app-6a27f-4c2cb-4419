@@ -3,7 +3,7 @@ import { useConfigurables } from "~/modules/configurables";
 export default function IndexPage() {
   const { config, loading } = useConfigurables();
 
-  const heading = loading ? "" : (config.heroHeading ?? "Hello World");
+  const heading = loading ? "" : (config.heroHeading ?? "Hello Wo");
   const subheading = loading ? "" : (config.heroSubheading ?? "");
   const bgColor = loading ? "#ffffff" : (config.heroBackgroundColor ?? "#ffffff");
   const textColor = loading ? "#111827" : (config.heroTextColor ?? "#111827");
